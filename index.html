@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo Amigo Invisible</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="container">
+    <h1>Sorteo de Amigo Invisible</h1>
+
+    <form id="formNombres">
+        <label for="cantidadPersonas">Ingrese la cantidad de personas:</label>
+        <input type="number" id="cantidadPersonas" name="cantidadPersonas" required>
+
+        <div id="nombresContainer" style="display: none;"></div>
+
+        <button type="button" onclick="obtenerNombres()">Ingresar Nombres</button>
+        <button type="button" onclick="realizarSorteo()">Realizar Sorteo</button>
+    </form>
+
+    <div id="resultados" style="display: none;">
+        <h2>Resultados del Sorteo</h2>
+        <div id="resultadosContainer"></div>
+    </div>
+
+    <div id="consultaContainer" style="display: none;">
+        <label for="nombreConsulta">Ingrese su nombre para conocer su asignación:</label>
+        <input type="text" id="nombreConsulta" name="nombreConsulta" required>
+        <button type="button" onclick="consultarAsignacionPorNombre()">Realizar Consulta</button>
+        <button type="button" onclick="limpiarAsignacion()">Limpiar Resultado</button>
+    </div>
+
+    <p id="asignacionActual"></p>
+
+    <p id="mensajeError" style="color: red;"></p>
+
+    <button type="button" onclick="reiniciarSorteo()">Reiniciar Sorteo</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
